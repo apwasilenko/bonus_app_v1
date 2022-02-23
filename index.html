@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Бортовой журнал водителя такси</title>
+  <link rel="stylesheet" href="./mystyle.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="divnewzakaz" id="divnewzakaz">
+      <form action="./../../php/insert.php">
+        <input name="mytype" type="text" value="zakaz" style="display:none">
+        <table>
+          <tr>
+            <td colspan="2" align=right>
+              <span id="labdatatime">Дата и время выполнения заказа</span>
+            </td>
+            <td>
+              <input id="datatime" class="inp" name="data_time" type="datetime-local">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align=right>
+              <span id="labdistance">Пробег, км</span>
+            </td>
+            <td>
+              <input id="distance" class="inp" name="distance" type="number" step="0.1">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align=right>
+              <span id="labwork">Время, мин.</span>
+            </td>
+            <td>
+              <input id="work" class="inp" name="work" type="number" step="1">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align=right>
+              <span id="labsumm">Сумма, руб.</span>
+            </td>
+            <td>
+              <input id="summ" class="inp" name="summ" type="number" step="10">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align=right>
+              <span id="labcommission">Комиссия, руб. </span>
+            </td>
+            <td>
+              <input id="commission" class="inp" name="commission" type="number" step="1">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <p id="paragraf"></p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" id="param" align="center">Параметры</td>
+          </tr>
+          <tr>
+            <td align="center">Тариф</td>
+            <td align="center">Расчет</td>
+            <td align="center">Дополнительно</td>
+          </tr>
+          <tr>
+            <td align="center">
+              <select size="1" name="tarif" id="mytarif">
+                <option value="0">Бонус Поселок</option>
+                <option value="1">Бонус Деревни</option>
+                <option value="2">Бонус Город</option>
+                <option value="3">Визит Поселок</option>
+                <option value="4">Визит Загород</option>
+                <option value="5">Поехали Поселок</option>
+                <option value="6">Поехали Загород</option>
+                <option value="7">Безналичный</option>
+                <option value="8">Аукцион</option>
+              </select>
+            </td>
+            <td align="center">
+              <select size="1" name="razchet" id="myrazhet">
+                <option value="0">Наличный</option>
+                <option value="1">Сбербанк онлайн</option>
+                <option value="2">По бонусам</option>
+              </select>
+            </td>
+            <td align="center">
+              <select size="1" name="autozakaz" size="1" id="myautozakaz">
+                <option value="0">Нет</option>
+                <option value="1">Автоназначение</option>
+              </select>
+              <select size="1" name="zvezda" id="myzvezda">
+                <option value="0">Нет</option>
+                <option value="1">Звездный</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td align=center>
+              <input id="ok" class="my_button" name="ok" type="button" onclick="ok_button()" value="Отправить">
+            </td>
+            <td align=center>
+              <input id="reset" class="my_button" name="reset" type="button" onclick="reset_button()" value="Очистить">
+            </td>
+            <td align=center>
+              <input id="cansel" class="my_button" name="cansel" type="button" onclick="cansel_button()"
+                value="Отменить">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="divaddzakaz" id="divaddzakaz">
+      <input id="btnewzakaz" class="divaddzakaz" type="button" value="Новый заказ" onclick="newzakaz()">
+    </div>
+  </div>
+  <script src="./myjavascript.js"></script>
+</body>
+
+</html>

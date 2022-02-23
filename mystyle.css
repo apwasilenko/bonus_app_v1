@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background: #e1e1e1;
+}
+
+.divnewzakaz{
+    visibility: hidden;
+    position: absolute;
+    background: #c1c1c1;
+}
+
+ .divaddzakaz{
+    width: 100px;
+    height: 100px;
+    right: 30px;
+    top: 30 px;
+    position: absolute;
+    border-radius: 80%;
+}
+
+span{
+    display: block;
+    background: yellow;
+}
+
+.inp{
+    display: block;
+    background: yellow;
+}
